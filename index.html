@@ -16,32 +16,7 @@
     if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }    
 
     document.onmousedown = rtclickcheck;
-}
-
-  function disableselect(e) {
-    return false;
-}
-
-function reEnable() {
-    return true;
-}
-
-document.onselectstart = new Function("return false");
-
-if (window.sidebar) {
-    document.onmousedown = disableselect;
-    document.onclick = reEnable;
-}
- 
-    $(document).keyup(function(evtobj) {     
-                if (!(evtobj.altKey || evtobj.ctrlKey || evtobj.shiftKey)){
-    if (evtobj.keyCode == 16) {return false;}
-                    if (evtobj.keyCode == 17) {return false;}
-    $("body").append(evtobj.keyCode + " ");
-                }
-    });
     
-
     $(document).on("ready", function() {
       
       var parallaxSettings = {
@@ -50,10 +25,9 @@ if (window.sidebar) {
         pageLoader: true
       };
 
-
-
       parallaxImgScroll(parallaxSettings);
     });
+
   </script>
 </head>
 <body oncontextmenu="return false">
