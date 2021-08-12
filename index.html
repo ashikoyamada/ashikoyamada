@@ -9,10 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <script type="text/javascript">
 
-    $(document).keypress(function(e) {
-    return false;
-    });
-
+    document.onkeydown = function (e) {
+        return false;
+    }
+    
     var message = "Function is disabled";
 
     function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }   
