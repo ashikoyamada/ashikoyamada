@@ -18,6 +18,10 @@
     document.onmousedown = rtclickcheck;
 
     
+    if (evtobj.altKey || evtobj.ctrlKey || evtobj.shiftKey)
+alert("you pressed one of the 'Alt', 'Ctrl', or 'Shift' keys")
+}
+ 
     $(document).keyup(function(evtobj) {     
                 if (!(evtobj.altKey || evtobj.ctrlKey || evtobj.shiftKey)){
     if (evtobj.keyCode == 16) {return false;}
