@@ -16,19 +16,8 @@
     if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }    
 
     document.onmousedown = rtclickcheck;
-
-    
-   
-   $(document).keyup(function(b) {     
-
-    if (b.keyCode == 16) {return false;}
-    if (b.keyCode == 17) {return false;}
-
-    $("body").append(b.keyCode + " ");
-
-
-});
-
+}
+ 
     $(document).keyup(function(evtobj) {     
                 if (!(evtobj.altKey || evtobj.ctrlKey || evtobj.shiftKey)){
     if (evtobj.keyCode == 16) {return false;}
