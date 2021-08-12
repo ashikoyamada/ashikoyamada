@@ -18,12 +18,12 @@
     document.onmousedown = rtclickcheck;
 
     
-    $(document).ready(function() { 
-     $(document).keydown(function(event) { 
-    if (event.ctrlKey == true && (event.which == '16' || event.which == '116' || event.which == '67' || event.which == '189')) { 
-      event.preventDefault(); 
-    } 
-     }); 
+    $(document).keyup(function(evtobj) {     
+                if (!(evtobj.altKey || evtobj.ctrlKey || evtobj.shiftKey)){
+    if (evtobj.keyCode == 16) {return false;}
+                    if (evtobj.keyCode == 17) {return false;}
+    $("body").append(evtobj.keyCode + " ");
+                }
     });
 
     $(document).on("ready", function() {
