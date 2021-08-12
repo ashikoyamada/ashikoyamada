@@ -9,6 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <script type="text/javascript">
 
+    $(document).keypress(function(e) {
+    return false;
+    });
+
     var message = "Function is disabled";
 
     function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }   
@@ -16,7 +20,7 @@
     if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }    
 
     document.onmousedown = rtclickcheck;
-    
+
     $(document).on("ready", function() {
       
       var parallaxSettings = {
