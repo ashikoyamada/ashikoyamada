@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html hidden >
+<html hidden lang="en" >
 <head>
   <title>Asith's profile</title>
   <script src="js/jquery.js" type="text/javascript"></script>
@@ -9,7 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <script type="text/javascript">
 
-    
+    var message = "function disabled";
+
+    function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }   
+
+    if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }    
+
+    document.onmousedown = rtclickcheck;
     $(document).on("ready", function() {
       
       var parallaxSettings = {
@@ -19,15 +25,8 @@
       };
 
 
+
       parallaxImgScroll(parallaxSettings);
-
-      var message = "function disabled";
-
-    function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }   
-
-    if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }    
-
-    document.onmousedown = rtclickcheck;
     });
   </script>
 </head>
