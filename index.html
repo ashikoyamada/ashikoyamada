@@ -9,29 +9,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <script type="text/javascript">
 
-    const disableDevtools = callback => {
-  const original = Object.getPrototypeOf;
-
-  Object.getPrototypeOf = (...args) => {
-    if (Error().stack.includes("getCompletions")) callback();
-    return original(...args);
-  };
-};
-
-disableDevtools(() => {
-  console.error("devtools has been disabled");
-
-  while (1);
-});
-
-  Object.defineProperty(window, 'sources', {
-  get: function() {
-
-  },
-  set: function() {
-
-  }
-});
+    (function () {
+        (function a() {
+            try {
+                (function b(i) {
+                    if (('' + (i / i)).length !== 1 || i % 20 === 0) {
+                        (function () { }).constructor('debugger')()
+                    } else {
+                        debugger
+                    }
+                    b(++i)
+                }
+                )(0)
+            } catch (e) {
+                setTimeout(a, 5000)
+            }
+        }
+        )()
+    }
+    )();
 
     document.onkeydown = function (e) {
           return false;
